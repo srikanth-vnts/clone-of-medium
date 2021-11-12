@@ -28,7 +28,7 @@ function WriteStory() {
             <br/>
                 <input className={styles.inputTitle2} type="text" placeholder="Tell your story..."  name="story" onChange={handleChange} />
                 <br />
-                <Link to="/"><button  onClick={handleSubmit} >Publish</button></Link>
+                <Link to="/stories"><button onClick={handleSubmit} >Publish</button></Link>
             </div>
         </div>
     )
