@@ -25,7 +25,7 @@ function Stories() {
                 <button className={styles.draftbuttons} style={{borderBottom:viewState==="responses"?"2px solid black":"none"}} onClick={()=>handleviewState("responses")}>Responses</button>
             </div>
             <div>
-                {viewState==="drafts"?<div>drafts</div>:viewState==="Publish"?<div><Publish/></div>:<div>Responses</div>}
+                {viewState==="drafts"?<div><p>No Drafts available</p></div>:viewState==="Publish"?<div><Publish/></div>:<div>Responses</div>}
             </div>
         </div> 
     )

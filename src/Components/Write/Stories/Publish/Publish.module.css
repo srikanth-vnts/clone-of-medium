@@ -1,4 +1,6 @@
 .blogs {
   height: 150px;
   border: 1px solid gray;
+  text-align: left;
+  padding-left: 10%;
 }

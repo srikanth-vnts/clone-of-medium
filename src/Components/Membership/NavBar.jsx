@@ -18,7 +18,7 @@ const links = [
     title: "Membership",
   },
   {
-    to: "/write",
+    to: "/writehome",
     title: "Write",
   },
   {
@@ -27,12 +27,12 @@ const links = [
   },
 ];
 
-function NavBar() {
+function NavBar({value}) {
 
 
   return (
     <>
-      <div className="navBarSection11" >
+      <div style={{backgroundColor:value}} className="navBarSection11" >
         <div className="navBar">
           <div className="leftNavSec">
             <Link

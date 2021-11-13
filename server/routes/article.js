@@ -1,4 +1,4 @@
-const articlecontroller = require("../controllers/article.controller");
+const articlecontroller = require("../controllers/Article.controller");
 const multipart = require("connect-multiparty");
 const multipartWare = multipart();
 

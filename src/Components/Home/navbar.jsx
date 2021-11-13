@@ -44,7 +44,10 @@ export const Navbar = () => {
         </span>
 
         <span style={{color:"black"}}>    <ScrollDialog value="Sign In"/></span>
-        <span><ScrollDialog value="Write"/></span>
+        <span  onClick={() => {
+            window.location.href = "/writehome";
+          }} >Write</span>
+        
         <span
           onClick={() => {
             window.location.href = "/membership";

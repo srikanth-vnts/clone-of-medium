@@ -4,56 +4,44 @@ import logo from "../Image/logo.svg";
 import save from "../Image/save.png";
 import ringing from "../Image/ringing.png";
 import search from "../Image/search.png";
-import addPlus from "../Image/addPlus.png";
 import { Link } from "react-router-dom";
-import Logout from "../Login/components/Logout";
-import { useState } from "react";
+
 const links = [
   {
-    to: "/",
+    to: "/home",
     title: "Home",
   },
   {
-    to: "/write",
+    to: "/home/edit",
     title: "Our story",
   },
   {
-    to: "/publish",
+    to: "/home/list",
+    title: "Saved",
+  },
+  {
+    to: "/",
     title: "Saved",
   },
 ];
 
-
-
-export const SignNav = () => {
-
-  const [name, setName]= useState(localStorage.getItem("loginname"))
-
-  const [email, setEmail]= useState(localStorage.getItem("loginemail"))
-
-  const [img, setImg]= useState(localStorage.getItem("profileImg"))
-
-
-
-
-//console.log(name, email, img)
-
+export const SignNav = (props) => {
   return (
-    <div className="navbar">
+    <div className="navbar22">
       <div className="navbar-inner">
-        <Link to={links[0].to} style={{ textDecoration: "none" }}>
-          <div className="navbar-inner-left">
-            <div className="navbar-inner-left-image">
+        <div className="navbar-inner-left">
+          <div className="navbar-inner-left-image">
+            <Link to={links[3].to} style={{ textDecoration: "none" }}>
               <img alt="" src={logo} />
-            </div>
-            <div className="navbar-inner-left-text">Medium</div>
+            </Link>
           </div>
-        </Link>
+          <Link to={links[0].to} style={{ textDecoration: "none" }}>
+            <div className="navbar-inner-left-text ms-2">{props.name}</div>
+          </Link>
+        </div>
         <div className="navbar-inner-right">
           <Link to={links[1].to}>
-            <div className="navbar-inner-right-add">
-              <img alt="" src={addPlus} />
-            </div>
+            <div className="navbar-inner-right-add"></div>
           </Link>
           <div className="navbar-inner-right-search">
             <img alt="" src={search} />
@@ -125,7 +113,7 @@ export const SignNav = () => {
             >
               <img
                 className="profile"
-                src={img}
+                src="https://cdn-images-1.medium.com/fit/c/35/35/0*EWs9dkB9i9yar9-3"
                 alt=""
               />
             </span>
@@ -141,12 +129,12 @@ export const SignNav = () => {
                 <div id="offcanvasRightLabel" className="d-flex p-1">
                   <img
                     className="profile myImg"
-                    src={img}
+                    src="https://cdn-images-1.medium.com/fit/c/35/35/0*EWs9dkB9i9yar9-3"
                     alt=""
                   />
                   <div className="ms-3">
-                    <div className="fs-5">{name}</div>
-                    <div className="">{email}</div>
+                    <div className="fs-5">Shivam Singh</div>
+                    <div className="">@shivamsingh4458</div>
                   </div>
                 </div>
                 <button
@@ -160,12 +148,12 @@ export const SignNav = () => {
               <div className="offcanvas-body myOptionsSec">
                 <div className="LinkOneBox">
                   <div className="myAllLinkOpt" id="myFirst">
-                    <Link className="myLinkOne" to={`/write`}>
+                    <Link className="myLinkOne" to={`/home/edit`}>
                       Write a story
                     </Link>
                   </div>
                   <div className="myAllLinkOpt">
-                    <Link className="myLinkOne" to={`/story`}>
+                    <Link className="myLinkOne" to={``}>
                       Stories
                     </Link>
                   </div>
@@ -220,7 +208,7 @@ export const SignNav = () => {
                   </div>
                   <div className="myAllLinkOpt">
                     <Link className="myLinkOne" to={`/`}>
-                      <Logout />
+                      Sign out
                     </Link>
                   </div>
                 </div>

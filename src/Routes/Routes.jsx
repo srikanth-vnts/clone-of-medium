@@ -9,6 +9,10 @@ import Publish from "../Components/Write/Stories/Publish/Publish";
 import { SignNav } from "../Components/HomeLoggedIn/SignNav";
 import Story from "../Components/Write/Stories/Stories";
 import {Home} from "../Components/Home/page/Home"
+import { Write } from "../Components/HomeWrite/Write";
+import {NavBar} from "../Components/Membership/NavBar"
+
+//import {NavBar} from "../Components/Home/navbar"
 function Routes() {
   return (
     <>
@@ -16,11 +20,15 @@ function Routes() {
       <Route path="/" exact>
           <Home />
         </Route>
+        <Route path="/writehome" exact>
+        <NavBar value="rgb(241,77,46)" />
+          <Write />
+        </Route>
         <Route path="/home" exact>
           <HomeSignin />
         </Route>
         <Route path="/ourstory" exact>
-          <SignNav />
+          <NavBar />
           <OurStoryPage />
         </Route>
         <Route path="/membership" exact>

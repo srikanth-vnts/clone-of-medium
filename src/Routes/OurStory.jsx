@@ -6,7 +6,7 @@ import { OurStory } from "../Components/OurStory/OurStory";
 function OurStoryPage() {
   return (
     <>
-      <NavBar />
+   
       <OurStory />
     </>
   );

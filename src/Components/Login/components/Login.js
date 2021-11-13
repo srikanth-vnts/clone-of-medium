@@ -10,21 +10,28 @@ const clientId =
 function Login() {
   const onSuccess = (res) => {
     console.log('Login Success: currentUser:', res.profileObj);
+
+
     // alert(
     //   `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
     // );
     // window.location.href="https://prajal.vercel.app/"
-    axios.post('/http://localhost:4000/api/user/', {
-      firstName: 'Fred',
-      lastName: 'Flintstone'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-    window.localStorage.setItem('name', 'Obaseki Nosa');
+    // axios.post('/http://localhost:4000/api/user/', {
+    //   firstName: 'Fred',
+    //   lastName: 'Flintstone'
+    // })
+    // .then(function (response) {
+    //   console.log(response);
+    // })
+    // .catch(function (error) {
+    //   console.log(error);
+    // });
+    window.localStorage.setItem('loginname', res.profileObj.name);
+    window.localStorage.setItem('loginemail', res.profileObj.email);
+    window.localStorage.setItem('profileImg', res.profileObj.imageUrl);
+
+    window.location.href="/home"
+   
     refreshTokenSetup(res);
   };
 
