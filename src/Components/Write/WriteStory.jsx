@@ -11,12 +11,12 @@ function WriteStory() {
 
      function handleChange(e) {
         const { name, value } = e.target;
-        setStory({...story,  [name]: value })
-         console.log(story);
+        setStory({...story,  [name]: value,author:"618ec340c4510f1fd3b17fb0" })
+        console.log(story);
     }
 
     async function handleSubmit() {
-        const  data  = await axios.post("http://localhost:1234/store", story)
+        const  data  = await axios.post("http://localhost:5000/api/article/", story)
         console.log("harish", data);
     }
     
