@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DemoCarousel from './DemoCarousel';
+
 import styles from "./WriteStory.module.css";
 import axios from "axios";
 import {Link} from "react-router-dom"

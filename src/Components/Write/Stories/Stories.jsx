@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import styles from "./Stories.module.css";
-import Publish from "../OurStory/Publish/Publish";
+import Publish from "./Publish/Publish";
 
 function Stories() {
     const [viewState, setViewState] = useState("drafts")
