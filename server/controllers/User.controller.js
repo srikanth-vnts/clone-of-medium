@@ -3,13 +3,15 @@ const Article = require("./../models/Article.model");
 
 module.exports = {
   addUser: (req, res, next) => {
-    new User(req.body).save((err, newUser) => {
-      const user=User.findOne({"name":req.body.name})
+    console.log(req.body.name)
+    // let user= User.findOne({ email: req.body.email });
     //  console.log(user)
-      if(user){
+    //   if(!user){
         
-        res.send(User)
-      }
+    //     return res.status(400).send({ mes: "user alredy in database" });
+    //   }
+    new User(req.body).save((err, newUser) => {
+
       console.log("PPP")
       if (err) res.send(err);
       else if (!newUser) res.send(400);
