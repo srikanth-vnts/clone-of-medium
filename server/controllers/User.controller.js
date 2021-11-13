@@ -4,6 +4,13 @@ const Article = require("./../models/Article.model");
 module.exports = {
   addUser: (req, res, next) => {
     new User(req.body).save((err, newUser) => {
+      const user=User.findOne({"name":req.body.name})
+    //  console.log(user)
+      if(user){
+        
+        res.send(User)
+      }
+      console.log("PPP")
       if (err) res.send(err);
       else if (!newUser) res.send(400);
       else res.send(newUser);

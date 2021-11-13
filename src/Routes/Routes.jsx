@@ -8,11 +8,14 @@ import ImportStory from "../Components/Write/Stories/ImportStory/ImportStory";
 import Publish from "../Components/Write/Stories/Publish/Publish";
 import { SignNav } from "../Components/HomeLoggedIn/SignNav";
 import Story from "../Components/Write/Stories/Stories";
-
+import {Home} from "../Components/Home/page/Home"
 function Routes() {
   return (
     <>
       <Switch>
+      <Route path="/" exact>
+          <Home />
+        </Route>
         <Route path="/home" exact>
           <HomeSignin />
         </Route>
